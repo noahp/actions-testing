@@ -21,7 +21,7 @@ jobs:
           submodules: recursive
 
       - name: check contains \#1
-        if: contains(fromJson('["v1.8.0", "v1.9.1", "v2.0.0"]'), matrix.nrf-connect)
+        if: ${{ ! contains(fromJson('["v1.8.0", "v1.9.1", "v2.0.0"]'), matrix.nrf-connect) }}
         run: |
           echo ${{ matrix.nrf-connect }}
           echo ${{ fromJson('["v1.8.0", "v1.9.1", "v2.0.0"]') }}
