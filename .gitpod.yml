@@ -4,10 +4,10 @@ tasks:
     # could also use /workspace/.vscode-remote/data/Machine/settings.json
     before: |
       mkdir -p ~/.config/Code/User/
-      cat > ~/.config/Code/User/settings.json <<EOF
-        {
-          "extensions.ignoreRecommendations": true,
-        }
+      cat > /workspace/.vscode-remote/data/Machine/settings.json <<EOF
+      {
+        "extensions.ignoreRecommendations": true,
+      }
       EOF
 
 
