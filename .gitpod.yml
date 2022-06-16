@@ -1,11 +1,12 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - name: vscode-settings
+    # could also use /workspace/.vscode-remote/data/Machine/settings.json
     before: |
       mkdir -p ~/.config/Code/User/
       cat > ~/.config/Code/User/settings.json <<EOF
         {
-          "extensions.ignoreRecommendations": "true",
+          "extensions.ignoreRecommendations": true,
         }
       EOF
 
