@@ -2,7 +2,7 @@
 tasks:
   - name: vscode-settings
     # could also use ~/.config/Code/User/settings.json ?
-    init: |
+    before: |
       SETTINGS_FILE_=/workspace/.vscode-remote/data/Machine/settings.json
       mkdir -p $(dirname ${SETTINGS_FILE_})
       cat > ${SETTINGS_FILE_} <<EOF
