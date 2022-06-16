@@ -3,7 +3,6 @@ tasks:
   - name: vscode-settings
     before: |
       mkdir -p ~/.config/Code/User/
-      touch
       echo > ~/.config/Code/User/settings.json <<EOF
         {
           "extensions.ignoreRecommendations": "true",
